@@ -1,7 +1,5 @@
 package com.example.michael.hackricebunnies182.game;
 
-import android.graphics.Color;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,11 +7,11 @@ import java.util.List;
  * Created by Michael on 1/15/2016.
  */
 public class Player {
-    private Color color;
+    private PlayerColor color;
     private List<RouteCard> cards;
     private int score;
 
-    public Player(Color color) {
+    public Player(PlayerColor color) {
         this.score = 0;
         this.color = color;
         this.cards = new ArrayList<>();
