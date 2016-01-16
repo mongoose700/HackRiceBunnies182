@@ -193,4 +193,9 @@ public class GameMap {
         }
         return cityMap;
     }
+
+    public Deck createDeck() {
+        //TODO: create deck from map
+        return null;
+    }
 }

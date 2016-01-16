@@ -1,12 +1,13 @@
 package com.example.michael.hackricebunnies182.game;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
+
 
 /**
- * Created by Derek on 1/15/2016.
+ * The model (as per MVC)
  */
 public class Model {
 
@@ -15,10 +16,12 @@ public class Model {
     private GameMap map;
 
     public Model(Set<PlayerColor> colors) {
-        deck = new Deck();
-        players = colors.stream().map(Player::new).collect(Collectors.toList());
+        players = new ArrayList<>();
+        for (PlayerColor c : colors)
+            players.add(new Player(c));
         Collections.shuffle(players);
         map = new GameMap();
+        deck = map.createDeck();
     }
 
     public IViewToModelAdapter getAdapter() {
@@ -30,12 +33,12 @@ public class Model {
 
             @Override
             public Draw getNewDraw(Player player) {
-                return null;
+                return null; //TODO: create new draw
             }
 
             @Override
             public void makeChoice(Draw choice) {
-
+                //TODO: implement
             }
         };
     }
