@@ -3,6 +3,7 @@ package com.example.michael.hackricebunnies182.game;
 import android.graphics.Color;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,5 +22,9 @@ public class Player {
 
     public void addCards(List<RouteCard> addedCards) {
         cards.addAll(addedCards);
+    }
+
+    public List<RouteCard> getCards() {
+        return Collections.unmodifiableList(cards);
     }
 }
