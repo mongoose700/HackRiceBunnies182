@@ -1,10 +1,12 @@
 package com.example.michael.hackricebunnies182.game;
 
+import android.graphics.Color;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A player of the game
+ * Created by Michael on 1/15/2016.
  */
 public class Player {
     private final PlayerColor color;
