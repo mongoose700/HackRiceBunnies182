@@ -22,4 +22,8 @@ public class Deck {
         }
         return new Draw(drawnCards, player, mustKeep);
     }
+
+    public void returnCards(Draw draw) {
+        cards.addAll(draw.getReturnedCards());
+    }
 }
