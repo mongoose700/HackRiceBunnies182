@@ -1,6 +1,7 @@
 package com.example.michael.hackricebunnies182.game;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -19,5 +20,9 @@ public class Player {
 
     public void addCards(List<RouteCard> cards) {
         cards.addAll(cards);
+    }
+
+    public List<RouteCard> getCards() {
+        return Collections.unmodifiableList(cards);
     }
 }
